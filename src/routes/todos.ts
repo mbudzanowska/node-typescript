@@ -1,9 +1,11 @@
 import { Router } from "express";
 // const express = require("express"); -> normal commonjs, when not using TS
 
+import { createTodo } from "../controllers/todos";
+
 const router = Router();
 
-router.post("/");
+router.post("/", createTodo);
 router.get("/");
 router.patch("/:id");
 router.delete("/:id");
